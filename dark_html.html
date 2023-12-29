@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Color Scheme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .div {
+            border: 3px solid red;
+            width: 100%;
+            height: 80px;
+            transition: background-color 0.5s, color 0.5s; /* Add smooth transition effect */
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Toggle Color Scheme</h1>
+    
+    <button id="changeColorButton">Toggle Color</button>
+
+    <div class="div">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla facere eius assumenda? A beatae, ut laboriosam repellendus sapiente et veritatis porro eligendi id, voluptatum tempore quos harum quasi iste. Ducimus enim exercitationem tempora eveniet dolorum asperiores soluta deserunt ad incidunt.
+    </div>
+
+    <script>
+        let button = document.getElementById('changeColorButton');
+        let div = document.querySelector('div'); // Access the first element in the collection
+        
+        button.addEventListener('click', function () {
+            // Toggle the 'dark-mode' class on the div
+            div.classList.toggle('dark-mode');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Image Toggle</title>
+    <style>
+        img {
+            max-width: 100%;
+            height: 200px;
+            transition: opacity 0.5s; /* Add a smooth transition effect */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Dynamic Image Toggle</h1>
+    
+    <img id="myImage" src="https://learnwithmustafa.vercel.app/static/media/mustafa2.35a7cef0833484f6fa4b.jpeg" alt="Image 1">
+
+    <button id="toggleButton">Toggle Image</button>
+
+    <script>
+        let myImage = document.getElementById('myImage');
+        let toggleButton = document.getElementById('toggleButton');
+        let isImage1 = true;
+
+        toggleButton.addEventListener('click', function () {
+            // Toggle between two images based on the current state
+            if (isImage1) {
+                myImage.setAttribute('src', 'https://learnwithmustafa.vercel.app/static/media/myPic.a1dbd6ee5a0508d99f24.png');
+                myImage.setAttribute('alt', 'Image 2');
+            } else {
+                myImage.setAttribute('src', 'https://learnwithmustafa.vercel.app/static/media/mustafa2.35a7cef0833484f6fa4b.jpeg');
+                myImage.setAttribute('alt', 'Image 1');
+            }
+
+            // Toggle the state for the next click
+            isImage1 = !isImage1;
+        });
+    </script>
+
+</body>
+</html>
